@@ -1,3 +1,3 @@
-# YelpCamp
+# Original from: YelpCamp
 
-### Refactored by Ian Schoonover
+### Building in progress on AWS EC2

@@ -1,6 +1,4 @@
-# Original from: YelpCamp
-
-# Building in progress on AWS EC2
+# Web building in progress on AWS EC2 Ubuntu 1804LTS
 
 ## Backend
 ### Node.js: 

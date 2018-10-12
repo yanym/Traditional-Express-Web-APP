@@ -122,9 +122,6 @@ router.put("/:id", isSafe, function(req, res){
     //   req.flash('error', 'Invalid address @ router.put');
     //   return res.redirect('back');
     // }
-    // var lat = data.results[0].geometry.location.lat;
-    // var lng = data.results[0].geometry.location.lng;
-    // var location = data.results[0].formatted_address;
     var lat = data[0].latitude;
     var lng = data[0].longitude;
     var location = data[0].formattedAddress;

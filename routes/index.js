@@ -3,10 +3,20 @@ var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 
+//__________________________________________________________
+var atHome=new Boolean(true);
+//__________________________________________________________
+
 //root route
 router.get("/", function(req, res){
     res.render("landing");
 });
+
+//__________________________________________________________
+router.get("/home", function(req, res){
+    res.render("home");
+});
+//__________________________________________________________
 
 // show register form
 router.get("/register", function(req, res){

@@ -63,6 +63,12 @@ app.use(function(req, res, next){
 app.use("/", indexRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
+//__________________________________________________________
+
+app.use("/home", indexRoutes);
+
+// routes/index.js is also changed.
+//__________________________________________________________
 
 //app.listen(process.env.PORT, process.env.IP, function(){
 app.listen(80, function(){

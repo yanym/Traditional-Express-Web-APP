@@ -3,7 +3,7 @@
      <header class="jumbotron">
          <div class="container">
              <h1 align="center"><span class="glyphicon glyphicon-fire"></span> This is your home!</h1>
-             <p align="center">Bar and Club selected for you and Check them out!</p>
+             <p align="center">Nice club selected for you and check them out!</p>
              <p align="center">
                 <a class="btn btn-primary btn-lg" href="/campgrounds/new">Add New One</a>
              </p>
@@ -20,7 +20,7 @@
      
      <div class="row text-center flex-wrap" id="campground-grid">
         <% campgrounds.forEach(function(campground){ %>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-6 col-sm-10">
                 <div class="thumbnail">
                    <img src="<%= campground.image %>">
                    <div class="caption">

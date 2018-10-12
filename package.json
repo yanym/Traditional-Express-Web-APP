@@ -4,13 +4,13 @@
   "engines": {
     "node": "6.11.1"
   },
-  "description": "YelpCamp v1",
+  "description": "Funight v2",
   "main": "app.js",
   "scripts": {
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Colt Steele",
+  "author": "Yiming Yan",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -20,11 +20,11 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "express-session": "^1.15.6",
-    "geocoder": "^0.2.3",
     "locus": "^2.0.1",
     "method-override": "^2.3.10",
     "moment": "^2.22.2",
     "mongoose": "^4.13.14",
+    "node-geocoder": "^3.22.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^3.1.0",

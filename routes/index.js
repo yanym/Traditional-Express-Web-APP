@@ -42,14 +42,14 @@ router.post("/login", passport.authenticate("local",
         successRedirect: "/campgrounds",
         failureRedirect: "/login",
         failureFlash: true,
-        successFlash: 'Welcome to YelpCamp!'
+        successFlash: 'Funight is waiting for you!'
     }), function(req, res){
 });
 
 // logout route
 router.get("/logout", function(req, res){
    req.logout();
-   req.flash("success", "See you later!");
+   req.flash("success", "Byebye!");
    res.redirect("/campgrounds");
 });
 

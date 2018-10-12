@@ -62,17 +62,16 @@ router.post("/", isLoggedIn, isSafe, function(req, res){
   // console.log(req.body.location);
   // console.log(geocoder.geocode(req.body.location));
   geocoder.geocode(req.body.location, function (err, data) {
-    if (err || !data.length) {
-      //  === 'ZERO_RESULTS'
-      console.log(data);
-      req.flash('error', 'Invalid address @ router.post');
-      return res.redirect('back');
-    }
-
+    // if (err || !data.length) {
+    //   console.log("----------------------------------------------");
+    //   console.log(data);
+    //   console.log("----------------------------------------------");
+    //   req.flash('error', 'Invalid address @ router.post');
+    //   return res.redirect('back');
+    // }
     var lat = data[0].latitude;
     var lng = data[0].longitude;
     var location = data[0].formattedAddress;
-
     var newCampground = {name: name, image: image, description: desc, cost: cost, author:author, location: location, lat: lat, lng: lng};
     // Create a new campground and save to DB
     Campground.create(newCampground, function(err, newlyCreated){
@@ -98,7 +97,7 @@ router.get("/:id", function(req, res){
     Campground.findById(req.params.id).populate("comments").exec(function(err, foundCampground){
         if(err || !foundCampground){
             console.log(err);
-            req.flash('error', 'Sorry, that campground does not exist!');
+            req.flash('error', 'Sorry, that club does not exist!');
             return res.redirect('/campgrounds');
         }
         console.log(foundCampground)
@@ -116,16 +115,16 @@ router.get("/:id/edit", isLoggedIn, checkUserCampground, function(req, res){
 // PUT - updates campground in the database
 router.put("/:id", isSafe, function(req, res){
   geocoder.geocode(req.body.location, function (err, data) {
-
-    if (err || !data.length) {
-      req.flash('error', 'Invalid address @ router.put');
-      return res.redirect('back');
-    }
-
+    // if (err || !data.length) {
+    //   console.log("----------------------------------------------");
+    //   console.log(data);
+    //   console.log("----------------------------------------------");
+    //   req.flash('error', 'Invalid address @ router.put');
+    //   return res.redirect('back');
+    // }
     // var lat = data.results[0].geometry.location.lat;
     // var lng = data.results[0].geometry.location.lng;
     // var location = data.results[0].formatted_address;
-    
     var lat = data[0].latitude;
     var lng = data[0].longitude;
     var location = data[0].formattedAddress;
